@@ -1,6 +1,8 @@
 const mix = require('laravel-mix')
 
-mix.js('resources/js/site.js', 'public/js/site.js')
+mix
+    .setPublicPath('peak/')
+    .js('resources/js/site.js', 'public/js/site.js')
     .sourceMaps(false)
 
 mix.postCss('resources/css/site.css', 'public/css/site.css', [
