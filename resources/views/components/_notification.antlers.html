@@ -1,0 +1,31 @@
+---
+classes: {
+    'success': 'text-green-800',
+    'notice': 'text-yellow-800',
+    'error': 'text-red-800'
+}
+container_classes: {
+    'success': 'bg-green-100 border-green-600',
+    'notice': 'bg-yellow-100 border-yellow-600',
+    'error': 'bg-red-100 border-red-600'
+}
+---
+{{#
+    @name Notification
+    @desc The notification component. Currently used in `resources/views/page_builder/_form.antlers.html`..
+#}}
+
+<div
+    class="rounded border p-4 {{ view:container_classes[type] }} {{ class }}">
+    <div class="flex">
+        <div class="flex-shrink-0">
+            {{ svg :src="type" class="h-5 w-5 {view:classes[type]} fill-current motion-safe:transition-colors" alt="" aria-hidden="true" }}
+        </div>
+        <div class="ml-3">
+            <h3
+                class="text-sm leading-5 font-bold {{ view:classes[type] }}" {{ attribute }}>
+                {{ content }}
+            </h3>
+        </div>
+    </div>
+</div>
