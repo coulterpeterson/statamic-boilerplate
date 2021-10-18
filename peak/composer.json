@@ -1,9 +1,0 @@
-{
-    "name": "studio1902/statamic-peak",
-    "extra": {
-        "statamic": {
-            "name": "Statamic Peak",
-            "description": "Statamic Peak starter kit"
-        }
-    }
-}
